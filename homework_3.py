@@ -1,0 +1,5 @@
+n = int(input("Введите число от 1 до 9 : "))
+n1 = int("%i" % n)
+n2 = int("%i%i" % (n, n))
+n3 = int("%i%i%i" % (n, n, n))
+print(n1 + n2 + n3)
