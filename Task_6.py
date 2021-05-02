@@ -1,6 +1,7 @@
 # Структура данных "Товары"
 product_type = 0
-dictionary = {"название": "", "цена": int, "количество": int, "ед": ""}
+dictionary = {}
+analitic_dict = {}
 number = 0
 # Вывод меню
 products = []
@@ -34,15 +35,17 @@ while True:
         type_values = set(type_values)
         type_values = list(type_values)
         dict_copy = dictionary.copy()
+        analitic_dict = {"название": name_values,
+                         "цена": price_values,
+                         "количество": quantity_values,
+                         "ед" : type_values}
         new_tuple = (number, dict_copy)
         products.append(new_tuple)
         print("Товар успешно добавлен.\n")
 
     elif choice == 3:
-        print(list(dictionary.keys())[0], name_values)
-        print(list(dictionary.keys())[1], price_values)
-        print(list(dictionary.keys())[2], quantity_values)
-        print(list(dictionary.keys())[3], type_values)
+        for key, value in analitic_dict.items():
+            print(key, value)
 
     elif choice == 4:
         break
