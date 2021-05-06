@@ -10,7 +10,6 @@ def int_func():
             if 97 <= ord(i) <= 122:
                 new_word += i
             else:
-                is_eng = False
                 new_word = ""
                 break
         if new_word != "":
