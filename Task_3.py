@@ -8,21 +8,21 @@ class Cell:
         print("|" * (self.cell % row) + "\n")
 
     def __add__(self, other):
-        return self.cell + other.cell
+        return f"|" * (self.cell + other.cell)
 
     def __sub__(self, other):
         result = self.cell - other.cell
         if result > 0:
-            return result
+            return f"|" * result
         else:
             return "Result is less then zero."
 
     def __mul__(self, other):
-        return self.cell * other.cell
+        return f"|" * (self.cell * other.cell)
 
     def __truediv__(self, other):
         try:
-            return round(self.cell / other.cell)
+            return f"|" * round(self.cell / other.cell)
         except ZeroDivisionError:
             return "Can't be divided by zero"
 
